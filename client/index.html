@@ -5,6 +5,21 @@
   </head>
   <body class="container">
     <button id="complimentButton">Get a compliment</button>
+    <button id="fortuneButton">Get your fortune</button>
+    <button id="quack">Ducks!</button>
+    <form id="fingers">What is one of your favorite fingers?
+      <input id="fingerInput" placeholder="Enter a favorite finger"/>
+      <button id="fingerBtn">Add finger to list</button>
+      <button id="deleteFinger">Delete fingers</button>
+    </form>
+    <form class="dropdown">Would you like to add any of these other famous fingers to your list?
+      <label id="famousFingers" for="famousFingers">Famous Fingers</label>
+        <select name="famousFingers" id="fame">
+          <option value="et">E.T.'s Luminous Index Finger</option>
+          <option value="jCash">Johnny Cash's Middle Finger</option>
+          <option value="sauron">Sauron's Severed Index Finger</option>
+      
+    </form>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
@@ -16,5 +31,6 @@
             });
       };
     </script>
+    <script src="script.js"></script>
   </body>
 </html>
