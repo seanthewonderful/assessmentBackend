@@ -49,7 +49,7 @@ app.post("/api/fingers", (req, res) => {
   res.status(200).send(fingers)
 })
 
-app.delete("/api/delete/", (res) => {
+app.delete("/api/delete/", (req, res) => {
   fingers.pop()
   res.status(200).send(fingers)
 })

@@ -87,12 +87,12 @@ function createFinger() {
 //     res.status(200).send(fingers)
 // }
 
-const deleteFing = () => {
+const deleteFing = (event) => {
     //const newIndex = indexInput.value  <--if you want to delete based on an input. In this case we used a number to just represent an index. Just make an input and querySelect it as indexInput
-    axios.delete(`${baseURL}/api/delete/`, body)
+    event.preventDefault();
+    axios.delete(`${baseURL}/api/delete/`)
         .then((res) => {
-            fingers.pop()
-            console.log(fingers)
+            console.log(res.data)
             // res.status(200).send(fingers)
         })
 }
