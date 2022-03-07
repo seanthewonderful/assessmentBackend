@@ -45,14 +45,15 @@ let fingers = []
 app.post("/api/fingers", (req, res) => {
   const { newFinger } = req.body
   fingers.push(newFinger)
+  console.log(fingers)
   res.status(200).send(fingers)
 })
 
-app.delete("/api/fingers/", (res => {
-  fingers.reset()
+app.delete("/api/delete/", (res) => {
+  fingers.pop()
   res.status(200).send(fingers)
-}))
+})
 
-app.put("/api/fingers/", )
+// app.put("/api/edit/", )
 
 app.listen(4000, () => console.log("Server running on 4000"));
